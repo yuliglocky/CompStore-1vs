@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "compstore-1bd93": {
+      "hosting": {
+        "app": [
+          "compstore-1bd93"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "compstore-1bd93"
+  }
+}

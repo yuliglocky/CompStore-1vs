@@ -1,0 +1,33 @@
+
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Name </ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Last name</ion-label>
+    <ion-input type="text" [(ngModel)]="last_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">location</ion-label>
+    <ion-input type="text" [(ngModel)]="location"></ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label position="stacked">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="zipcode"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="register()">Register</ion-button>

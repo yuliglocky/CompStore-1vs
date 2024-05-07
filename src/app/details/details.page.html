@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ producto.nombre }}</ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-thumbnail slot="start">
+        <img [src]="producto.imagenURL" alt="Imagen del producto">
+      </ion-thumbnail>
+      <p>{{ producto.detalles }}</p>
+      <p>Precio: {{ producto.precio }}</p>
+      <!-- Agrega más detalles según la estructura de tu objeto Producto -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

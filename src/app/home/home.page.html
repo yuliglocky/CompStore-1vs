@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">CompStore</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="ion-padding">
+    <div class="image-container">
+      <img src="https://i.pinimg.com/originals/3b/91/53/3b9153439c66e5a400cb9bad09d43395.gif" alt="Imagen" class="rounded-image">
+      <div class="button-container">
+        <ion-button (click)="changeBoxShadow()" expand="block" class="custom-button" [class.active]="isBoxShadowActive">INICIAR </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
