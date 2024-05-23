@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <div class="search-container">
+      <input type="text" [(ngModel)]="term" placeholder="Buscar..." class="search-input">
+      <select [(ngModel)]="codigo" class="search-select">
+        <option value=""></option>
+        <option value="laptop">Laptop</option>
+        <option value="accesorios">Accesorios</option>
+        <option value="impresoras">Impresoras</option>
+        <option value="celulares">Celulares</option>
+        <option value="monitores">Monitores</option>
+      </select>
+      <button (click)="searchProductos()" class="search-button"></button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="promotion-card">
+    <ion-card-content>
+      <div class="promotion-banner">
+        <img src="https://back.panafoto.com/media/wysiwyg/2024/Banner-categoria/SAMSUNG-NEOQLED-1340x250.jpg" alt="Promoción especial" class="promotion-image" >
+        
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+  <div class="product-scroll">
+    <div *ngIf="productos.length > 0">
+      <ion-list class="product-list">
+        <ion-item *ngFor="let producto of productos" class="product-item">
+          <ion-thumbnail slot="start" class="product-image">
+            <img [src]="producto.imagenURL" alt="Imagen del producto">
+          </ion-thumbnail>
+          <ion-label class="product-label">
+            <div (click)="details(producto.id)">
+              <p>{{ producto.nombre }}</p>
+            </div>
+            <p class="product-price">Precio: {{ producto.precio }}</p>
+          </ion-label>
+          <app-car [producto]="producto"></app-car>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+
+<div *ngIf="productos.length === 0 && term && codigo">
+  <p>No se encontraron resultados para "{{ term }}" en la categoría "{{ codigo }}".</p>
+</div>
+<app-nav-barr></app-nav-barr>

@@ -1,0 +1,32 @@
+ion-content {
+    --ion-background-color: #06141B; /* Cambia el color de fondo según sea necesario */
+  }
+
+  ion-card {
+    --ion-background-color: #ffffff; /* Cambia el color de fondo según sea necesario */
+  }
+
+  .promotion-card {
+    margin-top: 20px; /* Espacio entre la card de promoción y las otras cards */
+      background-color:#06141B;  /* Cambia el color de fondo según sea necesario */
+   
+  }
+  
+  .promotion-banner {
+    position: relative; /* Establece el posicionamiento relativo para alinear elementos hijos */
+  }
+  .circular-image {
+    position: absolute;
+    top: 80%; /* Ajusta este valor para mover la imagen hacia abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 100%; /* Hace que la imagen tenga forma de círculo */
+  }
+  
+  .circular-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }

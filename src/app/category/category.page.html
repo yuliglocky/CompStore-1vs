@@ -1,11 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>category</ion-title>
+    <app-search></app-search>
   </ion-toolbar>
 </ion-header>
 
-<ion-button (click)="navigateToCategoryDetail('laptop')">Laptops</ion-button>
-<ion-button (click)="navigateToCategoryDetail('accesorios')">Accesorios</ion-button>
-<ion-button (click)="navigateToCategoryDetail('celulares')">Celulares</ion-button>
-<ion-button (click)="navigateToCategoryDetail('monitores')">Celulares</ion-button>
-<ion-button (click)="navigateToCategoryDetail('impresoras')">Celulares</ion-button>
+<ion-content>
+  
+  <div class="button-container">
+    <br><br><br>
+    <div class="center-container">
+      <ion-button class="category-button" (click)="navigateToCategoryDetail('laptop')">
+        <img src="https://i.pinimg.com/564x/73/6f/0d/736f0df7dd8fdf5617472f55f3b38f3e.jpg" alt="Laptops">
+       <ion-label>
+        <ion-title>Laptops</ion-title>
+       </ion-label>
+      </ion-button>
+      <ion-button class="category-button" (click)="navigateToCategoryDetail('accesorios')">
+        <img src="https://i.pinimg.com/564x/19/b9/5f/19b95f3af2873ca3b2fe5abc96f64b72.jpg" alt="Accesorios">
+        <ion-label>
+          <ion-title>Accesorios</ion-title>
+         </ion-label>
+      </ion-button>
+      <ion-button class="category-button" (click)="navigateToCategoryDetail('celulares')">
+        <img src="https://i.pinimg.com/564x/8c/cd/6f/8ccd6f93cdabe4ad8e437f8799895b83.jpg" alt="Celulares">
+        <ion-label>
+          <ion-title>Celulares</ion-title>
+         </ion-label>
+      </ion-button>
+      <ion-button class="category-button" (click)="navigateToCategoryDetail('monitores')">
+        <img src="https://i.pinimg.com/564x/16/5a/51/165a5114e465815fa0f7d4342cd9c317.jpg" alt="Monitores">
+        <ion-label>
+          <ion-title>Monitores</ion-title>
+         </ion-label>
+      </ion-button>
+      <ion-button class="category-button" (click)="navigateToCategoryDetail('impresoras')">
+        <img src="https://i.pinimg.com/564x/d0/83/5b/d0835b6e72e77beb65dd1b620a38c5c1.jpg" alt="Impresoras">
+        <ion-label>
+          <ion-title>Impresoras</ion-title>
+         </ion-label>
+      </ion-button>
+    </div>
+  </div>
+  </ion-content>
+  <app-nav-barr></app-nav-barr>

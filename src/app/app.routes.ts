@@ -14,6 +14,11 @@ export const routes: Routes = [
     path: 'register',
     loadComponent: () => import('./register/register.page').then( m => m.RegisterPage)
   },
+
+  {
+    path: 'landing',
+    loadComponent: () => import('./landing/landing.page').then( m => m.LandingPage)
+  },
   {
     path: 'login',
     loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
@@ -22,18 +27,7 @@ export const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
-  {
-    path: 'landing',
-    loadComponent: () => import('./landing/landing.page').then( m => m.LandingPage)
-  },
-  {
-    path: 'details',
-    loadComponent: () => import('./details/details.page').then( m => m.DetailsPage)
-  },
-  {
-    path: 'details/:id',// Aquí agregamos un parámetro de ruta ':id' para identificar el producto
-    loadComponent: () => import('./details/details.page').then( m => m.DetailsPage)
-  },
+
   {
     path: 'category',
     loadComponent: () => import('./category/category.page').then( m => m.CategoryPage)
@@ -50,6 +44,23 @@ export const routes: Routes = [
   {
     path: 'add-car',
     loadComponent: () => import('./add-car/add-car.page').then( m => m.AddCarPage)
+  },
+
+  {
+    path: 'details',
+    loadComponent: () => import('./details/details.page').then( m => m.DetailsPage)
+  },
+  {
+    path: 'details/:id',// Aquí agregamos un parámetro de ruta ':id' para identificar el producto
+    loadComponent: () => import('./details/details.page').then( m => m.DetailsPage)
+  },
+  {
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
+  },
+  {
+    path: 'search-products',
+    loadComponent: () => import('./search-products/search-products.page').then( m => m.SearchProductsPage)
   },
  
  

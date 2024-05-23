@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   <app-search></app-search>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="promotion-card">
+    <ion-card-content>
+      <div class="promotion-banner">
+        <img src="https://i.pinimg.com/564x/1f/0b/97/1f0b974ea0b87e4f7f397f46bb5bad4c.jpg" alt="Promoción especial" class="promotion-image" >  
+        <div class="circular-image">
+          <img src="https://i.pinimg.com/originals/34/34/cf/3434cffeba5fad0d46b84203e55e557a.gif" alt="Imagen circular" 
+          [routerLink]="['/profile']">      
+        </div>
+      </div>  
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card *ngIf="userData">
+      <ion-card-header>
+        <ion-card-title>Welcome, {{ userData.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Name</ion-label>
+          <ion-input [value]="userData.name" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Last Name</ion-label>
+          <ion-input [value]="userData.last_name" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Location</ion-label>
+          <ion-input [value]="userData.location" readonly></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+</ion-content>
+<app-nav-barr></app-nav-barr>

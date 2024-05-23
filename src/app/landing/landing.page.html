@@ -1,29 +1,86 @@
-<ion-header>
+
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Lista de Productos
-    </ion-title>
+    <app-search></app-search>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let producto of productos">
-      <ion-label>
-        <ion-thumbnail slot="start">
-          <img [src]="producto.imagenURL" alt="Imagen del producto">
-        </ion-thumbnail>
-        <h2>{{ producto.nombre }}</h2>
-        <p>Precio: {{ producto.precio }}</p>
-          <div (click)="verDetalles(producto.id)">
-            <!-- Card de producto -->
-            <p>{{ producto.nombre }}</p>
-            <!-- Otros detalles del producto -->
-          </div>
-      </ion-label>
-    </ion-item>
-    </ion-list>
+  <div id="container" class="carrousel-container3">
+    <div class="carrousel-wrapper">
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="appleImage" alt="">
+        </ion-card>
+      </div>
+  
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="lenovoImage" alt="">
+        </ion-card>
+      </div>
+  
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="hpImage" alt="">
+        </ion-card>
+      </div>
+  
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="dellImage" alt="">
+        </ion-card>
+      </div>
+  
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="asusImage" alt="">
+        </ion-card>
+      </div>
+  
+      <div id="box" class="carrousel-slide">
+        <ion-card id="brands" class="ion-card shadow-card">
+          <img [src]="canonImage" alt="">
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container2">
+    <div id="publi" class="carrousel-wrapper">
+  
+      <div class="carrousel-slide">
+        <div class="img-container">
+          <button>Click aquí</button>
+          <img [src]="publicidadImage1" alt="">
+        </div>
+      </div>
+  
+      <div class="carrousel-slide">
+        <div class="img-container">
+          <button>Click aquí</button>
+          <img [src]="publicidadImage2" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="ion-card shadow-card">
+    <div id="container" class="carrousel-container3">
+      <div class="carrousel-wrapper">
+        <div class="carrousel-slide">
+          <img src="https://i.pinimg.com/564x/ab/57/68/ab57682a5a2aed813598d26253201d21.jpg" alt="Imagen 1" class="custom-image">
+          <h3>Experiencia de usuarios</h3>
+        </div>
+        <div class="carrousel-slide">
+          <img src="https://i.pinimg.com/564x/68/53/9c/68539c729c6a3781168b361f6e0a319e.jpg" alt="Imagen 2" class="custom-image">
+          <h3>Experiencia de usuarios</h3>
+        </div>
+        <div class="carrousel-slide">
+          <img src="https://i.pinimg.com/564x/3a/33/fc/3a33fca5a39e3c220b33b9381f181eb9.jpg" alt="Imagen 3" class="custom-image">
+          <h3>Experiencia de usuarios</h3>
+        </div>
+      </div>
+    </div>
+</div>
 </ion-content>
-
- 
-
+<app-nav-barr></app-nav-barr>

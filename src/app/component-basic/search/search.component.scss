@@ -1,0 +1,46 @@
+.logo {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  }
+
+  .header {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-top: 20px; /* Espacio entre el botón y el logo */
+  }
+  
+  .search-button-container {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra el botón verticalmente */
+    margin-left: 10px; /* Espacio entre el logo y el botón */
+  }
+  
+  .search-button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px 30px; /* Ajusta el padding horizontal para hacer el botón más largo */
+    width: 200px; /* Ajusta el ancho del botón según sea necesario */
+  }
+  
+  .search-button a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  
+  .logo-container {
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+  }
+ 

@@ -1,0 +1,159 @@
+/* Estilo para el contenedor de la lista */
+.product-list {
+    padding: 10px;
+  }
+  
+  /* Estilo para cada ítem de la lista */
+  .product-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Estilo para la etiqueta del producto */
+  .product-label {
+    margin-left: 10px;
+    color: #333; /* Cambia el color del texto a tu preferencia */
+  }
+
+   /* Estilo para la imagen del producto */
+   .product-image {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    margin-right: 10px;
+  }
+
+
+  .product-scroll {
+    max-height: 80vh; /* Altura máxima para permitir el desplazamiento */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+  }
+  
+  .product-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-item {
+    margin-bottom: 20px; /* Espacio entre cada producto */
+  }
+
+  .custom-item {
+    display: flex;
+    flex-direction: row; /* Pone la imagen a la izquierda */
+    align-items: center; /* Alinea verticalmente el contenido */
+  }
+  
+  .custom-label {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .custom-img {
+    margin-right: 16px; /* Espacio entre la imagen y el texto */
+    width: 100px;
+    height: 100px;
+  }
+
+  .custom-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-details {
+    margin-left: 10px; /* Ajusta el espacio entre la imagen y los detalles del producto */
+  }
+  
+  .car-icon {
+    align-self: flex-end; /* Coloca el icono del carrito en la esquina inferior derecha */
+  }
+
+  ion-card-title {
+    font-size: 15px; /* Ajusta el tamaño del título según sea necesario */
+  }
+
+  .custom-img img {
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+  }
+  .custom-card-content {
+    position: relative;
+  }
+
+  .custom-card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-productcard {
+    flex: 1; /* Esto permite que este div ocupe el espacio disponible */
+  }
+  
+  .car-icon {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 50%; /* Lo posiciona en la mitad vertical de la tarjeta */
+    right: 0; /* Lo posiciona en el extremo derecho de la tarjeta */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+  }
+  
+  .custom-card {
+    position: relative; /* Establece el contexto de posición para la tarjeta */
+  }
+  
+
+  .product-image {
+    width: 80px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin-right: 10px; /* Espacio entre la imagen y el contenido */
+  }
+  
+  ion-card-content {
+    display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+  ion-content {
+    --ion-background-color: #06141B; /* Cambia el color de fondo según sea necesario */
+  }
+
+  ion-card {
+    --ion-background-color: #ffffff; /* Cambia el color de fondo según sea necesario */
+  }
+
+  .promotion-card {
+    margin-top: 20px; /* Espacio entre la card de promoción y las otras cards */
+      background-color:#06141B;  /* Cambia el color de fondo según sea necesario */
+   
+  }
+  
+  .promotion-banner {
+    position: relative; /* Establece el posicionamiento relativo para alinear elementos hijos */
+  }
+  
+
+
+  .carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel {
+    display: flex;
+  }
+  
+  .carousel img {
+    scroll-snap-align: start;
+    width: 100%;
+    min-width: 100%;
+  }
+  

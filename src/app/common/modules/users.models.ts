@@ -5,6 +5,7 @@ export interface Producto {
     nombre: string;
     precio: number;
     imagenURL: string;
-
+    isDeleted?: boolean;
+    quantity?: number; 
   }
 

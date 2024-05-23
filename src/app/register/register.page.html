@@ -1,33 +1,40 @@
 
-  <ion-item>
-    <ion-label position="stacked">Email</ion-label>
-    <ion-input type="email" [(ngModel)]="email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Password</ion-label>
-    <ion-input type="password" [(ngModel)]="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Confirm Password</ion-label>
-    <ion-input type="password" [(ngModel)]="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Name </ion-label>
-    <ion-input type="text" [(ngModel)]="name"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Last name</ion-label>
-    <ion-input type="text" [(ngModel)]="last_name"></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">location</ion-label>
-    <ion-input type="text" [(ngModel)]="location"></ion-input>
-  </ion-item> 
-
-  <ion-item>
-    <ion-label position="stacked">Apellido</ion-label>
-    <ion-input type="text" [(ngModel)]="zipcode"></ion-input>
-  </ion-item>
-
-  <ion-button expand="block" (click)="register()">Register</ion-button>
+<ion-content>
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Name</ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Last name</ion-label>
+          <ion-input type="text" [(ngModel)]="last_name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Location</ion-label>
+          <ion-select [(ngModel)]="location" (ionChange)="onLocationChange()">
+            <ion-select-option *ngFor="let loc of locations" [value]="loc.country">{{ loc.country }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Zipcode</ion-label>
+          <ion-input type="text" [(ngModel)]="zipcode" readonly></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="register()">Register</ion-button>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

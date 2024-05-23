@@ -1,0 +1,72 @@
+ion-button {
+    --background: #ffffff;
+    --background-hover: #ffffff;
+    --background-activated: #ffffff;
+    --background-focused: #ffffff;
+    --color: blue;
+    --border-radius: 50%; /* Hace que el botón sea redondo */
+    --border-color: #ffffff;
+    --border-style: solid;
+    --border-width: 1px;
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+    --ripple-color: deeppink;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px; /* Ancho máximo del contenedor para mostrar dos botones por fila */
+  }
+  
+  .category-button {
+    --background:  #ffffff;
+    --color: transparent;
+    --border-radius: 50%; /* Hace que el botón sea completamente redondo */
+    --border: none;
+    padding: 0;
+    width: 200px; /* Ancho del botón */
+    height: 200px; /* Altura del botón */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Espacio entre los botones */
+    width: calc(50% - 20px); /* Ancho del botón, menos el margen */
+  }
+  
+  .category-button img {
+    width: 120px; /* Tamaño de la imagen */
+    height: 120px; /* Tamaño de la imagen */
+    border-radius: 50%;
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio */
+  }
+  
+  .category-button span {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: black; /* Color del texto */
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+  ion-title{
+    --background:  #000000;
+  }
+
+  ion-Label{
+    --text-color:  #000000;
+  }
+  ion-content {
+    --ion-background-color: #06141B; /* Cambia el color de fondo según sea necesario */
+  }
+
+
+

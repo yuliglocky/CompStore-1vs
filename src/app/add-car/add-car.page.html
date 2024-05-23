@@ -1,13 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>add-car</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-title>Carrito de Compras</ion-title>
+    <ion-button (click)="navigateToLanding()">
+        <img [src]="logoPath" alt="Logo" class="logo">
+  </ion-button>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-car</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-thumbnail slot="start">
+        <img [src]="product.imagenURL" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ product.nombre }}</h2>
+        <p>Precio: {{ product.precio | currency }}</p>
+      </ion-label>
+      <ion-button slot="end" color="danger" (click)="deleteProducts(product)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-label>
+      <h2>Total: {{ totalPrice | currency }}</h2>
+    </ion-label>
+  </ion-item>
 </ion-content>
+<app-nav-barr></app-nav-barr>
