@@ -30,3 +30,27 @@ ion-content {
     width: 100%;
     height: auto;
   }
+
+  ion-button {
+    --background: #CCD0DF;
+    --background-hover: #CCD0DF;
+    --background-activated: #CCD0DF;
+    --background-focused: #CCD0DF;
+  
+    --color: rgb(0, 0, 0);
+  
+    --border-radius: 20px; /* Bordes más circulares */
+  
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 2px; /* Reduce el padding vertical */
+    --padding-bottom: 2px;
+    --padding-start: 8px; /* Reduce el padding horizontal */
+    --padding-end: 8px;
+  
+    --height: 30px; /* Reduce la altura del botón */
+    --width: auto; /* Permite que el ancho se ajuste al contenido */
+  }

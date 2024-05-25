@@ -1,5 +1,5 @@
 ion-content {
-    --ion-background-color: #232438;
+    --ion-background-color: #000000;
   }
   
   
@@ -251,3 +251,22 @@ ion-content {
     max-width: 200px; /* Establecer el ancho máximo */
     height: auto; /* Mantener la proporción */
   }
+
+  
+
+  .carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel {
+    display: flex;
+  }
+  
+  .carousel img {
+    scroll-snap-align: start;
+    width: 100%;
+    min-width: 100%;
+  }
+  

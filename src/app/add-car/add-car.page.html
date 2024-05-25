@@ -11,11 +11,12 @@
         <img [src]="product.imagenURL" />
       </ion-thumbnail>
       <ion-label>
+        
         <h2>{{ product.nombre }}</h2>
         <p>Precio: {{ product.precio | currency }}</p>
       </ion-label>
       <ion-button slot="end" color="danger" (click)="deleteProducts(product)">
-        Eliminar
+        X
       </ion-button>
     </ion-item>
   </ion-list>

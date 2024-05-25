@@ -1,0 +1,26 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Puedes ajustar esta altura según tus necesidades */
+    
+  }
+  
+  .centered-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin distorsionar */
+  }
+
+  ion-content {
+    --ion-background-color: #06141B; /* Cambia el color de fondo según sea necesario */
+  }
+
+  ion-card {
+    --ion-background-color: #ffffff; /* Cambia el color de fondo según sea necesario */
+  }
+
+  .custom-img img {
+    width: 1000px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+  }

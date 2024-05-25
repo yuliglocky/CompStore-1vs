@@ -24,13 +24,14 @@ export class CartService {
     if (auth.currentUser) {
       const cartCollectionRef = collection(this.firestore, `users/${auth.currentUser.uid}/cars`);
       const q = query(cartCollectionRef, where('nombre', '==', producto.nombre));
-
+  
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
         // Producto ya existe, actualizamos la cantidad
         const docSnapshot = querySnapshot.docs[0];
         const currentQuantity = (docSnapshot.data() as Producto).quantity || 0;
-        await updateDoc(docSnapshot.ref, { quantity: currentQuantity + 1, isDeleted: false });
+        const newQuantity = Math.min(currentQuantity + 1, 1); // Limitar la cantidad a 1
+        await updateDoc(docSnapshot.ref, { quantity: newQuantity, isDeleted: false });
       } else {
         // Producto no existe, añadimos con cantidad inicial de 1
         const productWithStatus = { ...producto, quantity: 1, isDeleted: false };
@@ -40,7 +41,7 @@ export class CartService {
       throw new Error('Usuario no autenticado');
     }
   }
-
+  
   ProductsCars(): Observable<Producto[]> {
     return new Observable<Producto[]>((observer) => {
       const auth = getAuth();
@@ -56,7 +57,7 @@ export class CartService {
               precio: doc.precio,
               imagenURL: doc.imagenURL,
               isDeleted: doc.isDeleted,
-              quantity: doc.quantity || 1
+              quantity: Math.max(doc.quantity || 1, 1) // Asegurar cantidad mínima de 1
             }));
             observer.next(productos);
           },
@@ -72,7 +73,7 @@ export class CartService {
       }
     });
   }
-
+  
   deleteProductFromCart(productId: string): Promise<void> {
     return new Promise<void>((resolve, reject) => {
       const auth = getAuth();

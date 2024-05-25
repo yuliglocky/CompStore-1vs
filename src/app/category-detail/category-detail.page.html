@@ -13,7 +13,6 @@
         
       </ion-card-content>
     </ion-card>
-    
     <ion-card *ngFor="let producto of productos" class="custom-card">
       <ion-item lines="none">
         <ion-thumbnail slot="start" class="custom-img">
@@ -22,13 +21,15 @@
         <ion-card-content>
           <div (click)="verDetalles(producto.id)" class="custom-productcard">
             <ion-card-title>{{ producto.nombre }}</ion-card-title>
-            <p>Precio: {{ producto.precio }}</p>
+            
+            <p>Precio: {{ producto.precio | currency }}</p>
           </div>
         </ion-card-content>
         <app-car [producto]="producto" class="car-icon"></app-car>
       </ion-item>
       <app-car [producto]="producto" class="car-icon"></app-car>
     </ion-card>
+    
   </ion-list>
 </ion-content>
 <app-nav-barr></app-nav-barr>

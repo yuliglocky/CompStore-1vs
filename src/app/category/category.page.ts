@@ -6,7 +6,7 @@ import { IonContent,
    IonTitle, 
    IonToolbar,
    IonButton,
-   IonLabel } from '@ionic/angular/standalone';
+   IonLabel, IonCard, IonCardContent } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { SearchComponent } from '../component-basic/search/search.component';
 import { RouterLink } from '@angular/router';
@@ -16,7 +16,7 @@ import { NavBarrComponent } from '../component-basic/nav-barr/nav-barr.component
   templateUrl: './category.page.html',
   styleUrls: ['./category.page.scss'],
   standalone: true,
-  imports: [IonLabel, 
+  imports: [IonCardContent, IonCard, IonLabel, 
     IonContent, 
     IonHeader, 
     IonTitle, IonToolbar, 

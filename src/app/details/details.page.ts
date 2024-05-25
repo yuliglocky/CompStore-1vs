@@ -8,14 +8,15 @@ import { IonContent, IonHeader, IonTitle, IonToolbar,
 import { IonicModule } from '@ionic/angular';
 import { FirestoreService } from '../services/firestore.service';
 import { Producto } from '../common/modules/users.models';
-
+import { NavBarrComponent } from '../component-basic/nav-barr/nav-barr.component';
+import { SearchComponent } from '../component-basic/search/search.component';
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
   styleUrls: ['./details.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonicModule,
-     FormsModule, IonCard, IonCardContent, IonCardTitle, IonCardHeader, IonThumbnail]
+     FormsModule, IonCard, IonCardContent, IonCardTitle, IonCardHeader, IonThumbnail, NavBarrComponent,SearchComponent]
 })
 export class DetailsPage implements OnInit {
   producto: Producto;

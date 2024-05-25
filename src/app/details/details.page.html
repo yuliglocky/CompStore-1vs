@@ -1,6 +1,7 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>Detalles del Producto</ion-title>
+    <app-search></app-search>
   </ion-toolbar>
 </ion-header>
 
@@ -10,12 +11,15 @@
       <ion-card-title>{{ producto.nombre }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-thumbnail slot="start">
-        <img [src]="producto.imagenURL" alt="Imagen del producto">
-      </ion-thumbnail>
+      <div class="image-container">
+        <ion-thumbnail slot="start" class="custom-img">
+          <img [src]="producto.imagenURL" alt="Imagen del producto" class="centered-image">
+        </ion-thumbnail>
+      </div>
       <p>{{ producto.detalles }}</p>
       <p>Precio: {{ producto.precio }}</p>
       <!-- Agrega más detalles según la estructura de tu objeto Producto -->
     </ion-card-content>
   </ion-card>
 </ion-content>
+<app-nav-barr></app-nav-barr>

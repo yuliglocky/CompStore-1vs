@@ -16,31 +16,31 @@ import { IonContent,
   IonCardHeader } from '@ionic/angular/standalone';
 import { FirestoreService } from '../services/firestore.service';
 import { Producto } from '../common/modules/users.models';
-import { SearchComponent } from '../component-basic/search/search.component';
-import { CARComponent } from '../car/car.component';
+
 import { RouterLink } from '@angular/router';
+import { SearchComponent } from '../component-basic/search/search.component';
 import { NavBarrComponent } from '../component-basic/nav-barr/nav-barr.component';
+import { CARComponent } from '../car/car.component';
 @Component({
   selector: 'app-category-detail',
   templateUrl: './category-detail.page.html',
   styleUrls: ['./category-detail.page.scss'],
   standalone: true,
-  imports: [IonContent, 
-    IonHeader, 
-    IonTitle, 
-    IonToolbar, 
-    CommonModule, 
-    FormsModule, 
-    IonItem, 
-    IonLabel,
-    IonList, 
-    IonThumbnail,
-    CARComponent,
+  imports: [IonContent,
     SearchComponent,
     IonCard,
     IonCardContent,
-    IonCardTitle, 
-    IonCardHeader,RouterLink, NavBarrComponent]
+    IonCardHeader, 
+    IonCardTitle,
+    IonList, 
+    IonLabel,
+    IonTitle,
+    IonToolbar,
+    IonHeader,
+    NavBarrComponent, 
+    IonThumbnail,
+    IonItem, CARComponent , 
+     CommonModule, FormsModule]
 })
 export class CategoryDetailPage implements OnInit {
  

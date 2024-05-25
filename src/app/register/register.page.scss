@@ -1,0 +1,61 @@
+
+ion-button {
+    --background: #CCD0DF;
+    --background-hover: #CCD0DF;
+    --background-activated: #CCD0DF;
+    --background-focused: #CCD0DF;
+  
+    --color: rgb(0, 0, 0);
+  
+    --border-radius: 20px; /* Bordes más circulares */
+  
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 2px; /* Reduce el padding vertical */
+    --padding-bottom: 2px;
+    --padding-start: 8px; /* Reduce el padding horizontal */
+    --padding-end: 8px;
+  
+    --height: 30px; /* Reduce la altura del botón */
+    --width: auto; /* Permite que el ancho se ajuste al contenido */
+  }
+  ion-content {
+    --ion-background-color: #06141B; /* Cambia el color de fondo según sea necesario */
+  }
+  
+  ion-label {
+    --ion-background-color: #CCD0CF; /* Cambia el color de fondo según sea necesario */
+  }
+  ion-item {
+    --ion-background-color: #CCD0CF; /* Cambia el color de fondo según sea necesario */
+  }
+
+
+  .logo {
+    width: 70px; /* Ajusta el tamaño según sea necesario */
+    height: 70px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  }
+  ion-card {
+    --ion-background-color: #CCD0CF; /* Cambia el color de fondo según sea necesario */
+  }
+
+  .login-title {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    color: #000000; /* Cambia el color según sea necesario */
+    transition: transform 0.3s ease-in-out; /* Añade la transición para el zoom */
+  }
+  
+  .login-title:hover {
+    transform: scale(1.1); /* Aplica el zoom al pasar el ratón */
+  }
+  
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }

@@ -43,8 +43,8 @@ import { NavBarrComponent } from '../component-basic/nav-barr/nav-barr.component
     IonImg, 
     IonCardContent,
     IonCardTitle,
-    IonCardSubtitle, 
-    NavBarrComponent]
+    IonCardSubtitle, NavBarrComponent] 
+    
 })
 export class AddCarPage implements OnInit {
   products: Producto[] = [];

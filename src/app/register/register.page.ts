@@ -52,13 +52,16 @@ export class RegisterPage implements OnInit {
     { country: 'USA', zipcode: '10001' },
     { country: 'Canada', zipcode: 'H1A 0A1' },
     { country: 'Mexico', zipcode: '01000' },
-    // Agrega más países y códigos postales según sea necesario
   ];
   confirmPassword: string = '';
   errorMessage: string = '';
   isBoxShadowActive: boolean = false;
-  constructor(private router: Router) { }
+  logoPath: string = 'assets/imagenes/logo.jpeg';
 
+
+
+  
+  constructor(private router: Router) { }
   async register() {
     if (this.password !== this.confirmPassword) {
       this.errorMessage = 'Las contraseñas no coinciden.';

@@ -11,7 +11,7 @@
         <option value="celulares">Celulares</option>
         <option value="monitores">Monitores</option>
       </select>
-      <button (click)="searchProductos()" class="search-button"></button>
+      <button (click)="searchProductos()" class="search-button"> Buscar </button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -37,7 +37,7 @@
             <div (click)="details(producto.id)">
               <p>{{ producto.nombre }}</p>
             </div>
-            <p class="product-price">Precio: {{ producto.precio }}</p>
+            <p class="product-price">Precio: {{ producto.precio | currency  }}</p>
           </ion-label>
           <app-car [producto]="producto"></app-car>
         </ion-item>
